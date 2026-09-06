@@ -1,9 +1,12 @@
-# Build and Deploy an Amazing 3D Developer Portfolio in React with Three.js
+# Tejaansh Sara — Portfolio
 
-![3D Website](https://i.ibb.co/ryytGVx/Screenshot-2023-11-25-at-11-28-11-AM.png)
+3D interactive portfolio built with React, Three.js, and Vite.
 
-### [🌟 Become a top 1% Next.js 14 developer in only one course](https://jsmastery.pro/next14)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
-### [📙 Free Three.js Cheatsheet](https://resource.jsmastery.pro/threejs-cheatsheet)
-### [🌐 Best Hosting for Your Websites](https://hostinger.com/javascript10)
+Live at [tejaansh.vercel.app](https://tejaansh.vercel.app).
 
+## Dev
+
+```bash
+npm install
+npm run dev
+```
