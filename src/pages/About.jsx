@@ -12,39 +12,41 @@ const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>
-        Hello, I'm{" "}
+        Hi, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
           {" "}
           Tejaansh
-        </span>{" "}
-        👋
+        </span>
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>
-          CS undergrad at Mahindra University and AI Infra Intern at Digital
-          Bullet Studios, building inference pipelines, backend systems, and
-          the occasional native iOS app end to end.
-        </p>
+        <p>I'm a CS student and I like learning</p>
       </div>
 
       <div className='py-10 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
 
-        <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
-            <div className='block-container w-20 h-20' key={skill.name}>
-              <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex justify-center items-center'>
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className='w-1/2 h-1/2 object-contain'
-                />
-              </div>
+        {[...new Set(skills.map((skill) => skill.category))].map((category) => (
+          <div key={category} className='mt-12'>
+            <h4 className='font-semibold text-black-500'>{category}</h4>
+            <div className='mt-6 flex flex-wrap gap-12'>
+              {skills
+                .filter((skill) => skill.category === category)
+                .map((skill) => (
+                  <div className='block-container w-20 h-20' key={skill.name}>
+                    <div className='btn-back rounded-xl' />
+                    <div className='btn-front rounded-xl flex justify-center items-center'>
+                      <img
+                        src={skill.imageUrl}
+                        alt={skill.name}
+                        className='w-1/2 h-1/2 object-contain'
+                      />
+                    </div>
+                  </div>
+                ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <div className='py-16'>

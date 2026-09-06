@@ -202,6 +202,9 @@ export function Island({
         case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
           setCurrentStage(2);
           break;
+        case normalizedRotation >= 3.2 && normalizedRotation <= 3.6:
+          setCurrentStage(5);
+          break;
         case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
           setCurrentStage(1);
           break;
